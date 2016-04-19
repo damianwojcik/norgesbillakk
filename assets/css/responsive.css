@@ -1,0 +1,161 @@
+@media screen and (max-width: 960px){
+
+
+	.container{
+		width: 95%;
+	}
+
+
+}
+
+
+@media screen and (max-width: 860px){
+
+
+	.header-top .row [class*="span"]{
+		display: block;
+		width: 100%;
+		margin: 0;
+	}
+
+	.header-top .span3 .wrap,
+	.header-top .span7 .wrap,
+	.header-top .span2 .wrap{
+		margin-bottom: 25px;
+		text-align: center;
+		float: none;
+	}
+
+	.header-top .span2 .wrap{
+		margin-bottom: 0;
+	}
+
+	.header-top .span2 table{
+		float: none;
+		width: 20%;
+		margin: auto;
+	}
+
+	.featured .span4{
+		width: 48%;
+		margin: 0;
+		margin-bottom: 30px;
+	}
+
+	.featured .span4:first-child{
+		margin-right: 2%;
+	}
+
+	.featured .span4:last-child{
+		width: 100%;
+		margin-bottom: 0;
+	}
+
+	.featured .span4:last-child .wrap{
+		width: 50%;
+		margin: auto;
+	}
+
+
+}
+
+
+@media screen and (max-width: 768px){
+
+
+	.desktop{
+		display: none;
+	}
+
+	.mobile{
+		display: block;
+	}
+
+	.gallery a .gallery-item{
+		width: 48%;
+	}
+
+	.gallery a:nth-child(2n) .gallery-item{
+   		margin-right: 0;
+	}
+
+	.gallery a:nth-child(3n) .gallery-item{
+		margin-right: 2%;
+	}
+
+	.header-top{
+		margin-bottom: 10px;
+	}
+
+	.banners ul li{
+		display: inline-block;
+		width: 13.4%;
+	}
+
+	.banners ul li:nth-child(-n+7){
+		margin-bottom: 10px;
+	}
+
+	.featured .span4{
+		width: 100%;
+		margin-right:  0;
+	}
+
+	.featured .span4:last-child .wrap{
+		width: 100%;
+	}
+
+	footer .row [class*="span"]{
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+
+	footer .scrollTop{
+		top: -25px;
+	}
+
+
+}
+
+
+@media screen and (max-width: 500px){
+
+
+	.gallery a .gallery-item{
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 25px;
+	}
+
+	.gallery a:nth-child(3n) .gallery-item{
+		margin-right: 0;
+	}
+
+	.btn.btn-slider,
+	.btn.btn-slider:hover{
+		padding: 11px 24px;
+		font-size: 22px;
+	}
+	.header-top .span3 .wrap,
+	.header-top .span7 .wrap,
+	.header-top .span2 .wrap{
+		margin-bottom: 20px;
+	}
+
+	.header-top .span2 .wrap{
+		margin-bottom: 0;
+	}
+
+	.banners ul li{
+		width: 18%;
+	}
+
+	.banners ul li:nth-child(-n+10){
+		margin-bottom: 10px;
+	}
+
+
+}
+
+

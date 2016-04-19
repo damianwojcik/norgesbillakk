@@ -1,0 +1,615 @@
+/*
+
+Theme Name: Norgesbillakk
+Theme URI: www.studionext.pl
+Description: Norgesbillakk Theme
+Version: 1.0
+Author: Studionext.pl
+Author URI: www.studionext.pl
+
+*/
+
+
+
+
+/* ---------------------------------------------------------------
+	Basic HTML elements 
+--------------------------------------------------------------- */
+*,
+*:before,
+*:after{
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*:focus{
+    outline: none;
+    border: 0;
+}
+
+body{
+    background: #EFEFEF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 400;
+    font-size: 100%;
+    color: #404040
+}
+
+a{	
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+    -webkit-transition: color 0.4s ease, background-color 0.4s ease, border 0.4s ease;
+    -moz-transition: color 0.4s ease, background-color 0.4s ease, border 0.4s ease;
+    -ms-transition: color 0.4s ease, background-color 0.4s ease, border 0.4s ease;
+    -o-transition: color 0.4s ease, background-color 0.4s ease, border 0.4s ease;
+    transition: color 0.4s ease, background-color 0.4s ease, border 0.4s ease;
+}
+
+ul, ol, li{
+	margin: 0;
+}
+
+img{
+	height: auto;
+	max-width: 100%;
+	display: block;
+}
+
+form{
+    margin: 0;
+    padding: 0;
+}
+
+input[type="text"], input[type="password"], input[type="email"], textarea, select, input[type="submit"], input[type="reset"], input[type="button"]{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ---------------------------------------------------------------
+    Font Styles
+--------------------------------------------------------------- */
+h1,h2,h3,h4,h5,h6, blockquote{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #404040;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #404040;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+small{ font-size: 80%; font-weight: normal; display: inline-block; }
+
+h2{
+    font-size: 20px;
+}
+
+h3{
+    font-size: 16px;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------------------------------------
+	Common elements / parts / modules
+--------------------------------------------------------------- */
+.container {
+	width: 960px;
+}
+
+.visible{
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.desktop{
+    display: block;
+}
+
+.mobile{
+    display: none;
+}
+
+/*ninja form*/
+.form-wrap{
+    background: #FEFEFE;/* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#FEFEFE, #F2F2F2); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FEFEFE, #F2F2F2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FEFEFE, #F2F2F2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FEFEFE, #F2F2F2); /* Standard syntax */
+    display: table;
+    width: 100%;
+    padding: 30px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.profile_pass-wrap input, .text-wrap.label-above input, .text-wrap.label-below input, .text-wrap.label-inside input, .textarea-wrap.label-above textarea, .textarea-wrap.label-below textarea, .textarea-wrap.label-inside textarea, .list-dropdown-wrap.label-above select, .list-dropdown-wrap.label-below select{
+    height: 50px;
+    padding-left: 15px;
+}
+
+#ninja_forms_form_5_cont textarea{
+    resize: none;
+    height: 150px;
+    padding-top: 15px;
+}
+
+#ninja_forms_field_12_div_wrap{
+    margin-bottom: 0;
+}
+
+/*gallery module*/
+.gallery{
+    display: table;
+    width: 100%;
+}
+
+.gallery a{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.gallery a .gallery-item{
+    display: block;
+    float: left;
+    width: 32%;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.gallery a:nth-child(3n) .gallery-item{
+    margin-right: 0;
+}
+
+.gallery a:hover .gallery-item{
+    opacity: 0.7;
+}
+
+
+/*breadcrumbs module*/
+.breadcrumbs{
+    display: table;
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.breadcrumbs span,
+.breadcrumbs span a{
+    color: #3074e0;
+}
+
+.breadcrumbs span:last-child span{
+    color: #404040;
+    cursor: default;
+}
+
+
+/* ---------------------------------------------------------------
+    buttons
+--------------------------------------------------------------- */
+.btn:active, button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active{
+    border: 0;
+}
+
+.btn,
+input.btn,
+input.btn:hover,
+a.btn,
+a.btn:hover,
+input[type="submit"],
+input[type="submit"]:hover{
+    background: #8C000D;/* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#F6002D, #8C000D); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F6002D, #8C000D); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F6002D, #8C000D); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F6002D, #8C000D); /* Standard syntax */
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFF;
+    padding: 13px 20px;
+    outline: 0;
+    box-shadow: none;
+    text-align: center;
+    border: 0;
+    margin: 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+input.btn:hover,
+a.btn:hover,
+input[type="submit"]:hover{
+    background: #570009;/* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#c20024, #570009); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#c20024, #570009); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#c20024, #570009); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#c20024, #570009); /* Standard syntax */
+}
+
+.btn.btn-slider,
+.btn.btn-slider:hover{
+    font-size: 24px;
+    font-style: italic;
+    padding: 11px 30px;
+    border: 1px solid #85000A;
+    -webkit-border-radius: 28px;
+    -moz-border-radius: 28px;
+    border-radius: 28px;
+}
+
+/* ---------------------------------------------------------------
+    mobile-navigation
+--------------------------------------------------------------- */
+.mobile-navigation{
+    width: 100%;
+    text-align: center;
+    background: #3E3E3E; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#575757, #3E3E3E); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#575757, #3E3E3E); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#575757, #3E3E3E); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#575757, #3E3E3E); /* Standard syntax */
+    color: #FFF;
+}
+
+.mobile-navigation a{
+    color: #FFF;
+    padding: 20px 0;
+    display: block;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-navigation a:hover{
+    background: rgba(255,255,255,0.1);
+}
+
+.mobile-navigation nav ul{
+    list-style-type: none;
+    display: none;
+}
+
+.mobile-navigation nav ul li{
+    display: block;
+}
+
+.mobile-navigation nav ul li a{
+    font-size: 14px;
+    display: block;
+    color: #FFF;
+    
+}
+
+.mobile-navigation nav ul li:last-child a{
+    border-bottom: none;
+}
+
+
+/* ---------------------------------------------------------------
+    header
+--------------------------------------------------------------- */
+
+/*header-top*/
+.header-top{
+    padding: 20px 0;
+}
+
+.header-top .span3 .wrap{
+    display: table;
+    height: 90px;
+    width: 100%;
+}
+
+.header-top .span3 .wrap a{
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.header-top .span3 .wrap a img{
+    display: inline-block;
+}
+
+.header-top .span7 .wrap{
+    text-align: right;
+}
+
+.header-top .span7 .wrap h2 small{
+    margin-top: 10px;
+}
+
+.header-top .span2 .wrap{
+    float: right;
+}
+
+.header-top .span2 table{
+    font-size: 14px;
+    float: right;
+    width: 100%;
+}
+
+.header-top .span2 table tr td:first-child{
+    text-align: left;
+}
+
+.header-top .span2 table tr td:last-child{
+    font-weight: bold;
+    text-align: right;
+}
+
+
+/*header-navigation*/
+.header-navigation{
+    margin-bottom: 30px;
+}
+
+.header-navigation .container{
+    background: #3E3E3E; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#575757, #3E3E3E); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#575757, #3E3E3E); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#575757, #3E3E3E); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#575757, #3E3E3E); /* Standard syntax */
+}
+
+.header-navigation nav{
+    display: table;
+    width: 100%;
+}
+
+.header-navigation nav ul{
+    list-style-type: none;
+}
+
+.header-navigation nav ul li{
+    display: inline-block;
+    float: left;
+}
+
+.header-navigation nav ul li a{
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    padding: 20px;
+    color: #EFEFEF;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    -webkit-transition: background-color 400ms linear;
+    -moz-transition: background-color 400ms linear;
+    -o-transition: background-color 400ms linear;
+    -ms-transition: background-color 400ms linear;
+    transition: background-color 400ms linear;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    -webkit-border-image: -webkit-gradient(linear, 0 100%, 0 0, from(rgba(255, 255, 255, 0.2)), to(rgba(0, 0, 0, 0))) 1 100%;
+    -webkit-border-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0)) 1 100%;
+    -moz-border-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0)) 1 100%;
+    -o-border-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0)) 1 100%;
+    border-image: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) 1 100%;
+
+}
+
+.header-navigation nav ul li:last-child a{
+    border-right: none;
+}
+
+.header-navigation nav ul li a:hover{
+    background-color: #C90015; /* For browsers that do not support gradients */
+    background-color: -webkit-linear-gradient(#E30023, #C90015); /* For Safari 5.1 to 6.0 */
+    background-color: -o-linear-gradient(#E30023, #C90015); /* For Opera 11.1 to 12.0 */
+    background-color: -moz-linear-gradient(#E30023, #C90015); /* For Firefox 3.6 to 15 */
+    background-color: linear-gradient(#E30023, #C90015); /* Standard syntax */
+}
+
+
+/* ---------------------------------------------------------------
+    main
+--------------------------------------------------------------- */
+main{
+    margin-bottom: 30px;
+}
+
+main h2{
+    font-size: 30px;
+}
+
+main ul{
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+main ul li{
+    display: list-item;
+    margin-bottom: 5px;
+}
+
+main .wrap{
+    display: table;
+    width: 100%;
+    background: #FFF;
+    padding: 45px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+/* ---------------------------------------------------------------
+    section slider
+--------------------------------------------------------------- */
+.slider{
+    margin-bottom: 30px;
+}
+
+.slider .owl-carousel{
+    width: 100%;
+}
+
+.slider .owl-carousel .owl-nav{
+    display: none;
+}
+
+.slider .owl-carousel .slide{
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: table;
+}
+
+.slider .owl-carousel .slide .wrap{
+    padding: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    height: 350px;
+}
+
+
+/* ---------------------------------------------------------------
+    section banners
+--------------------------------------------------------------- */
+.banners{
+    margin-bottom: 30px;
+}
+
+.banners .container .wrap{
+    display: table;
+    width: 100%;
+    background: #FFF;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.banners ul{
+    list-style-type: none;
+    display: table;
+    width: 100%;
+}
+
+.banners ul li{
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 2%;
+    text-align: center;
+}
+
+.banners ul li a{
+    display: inline-block;
+    width: 100%;
+}
+
+.banners ul li a img{
+    display: inline-block;
+    -webkit-transition: opacity 0.4s ease-out;
+    -moz-transition: opacity 0.4s ease-out;
+    -ms-transition: opacity 0.4s ease-out;
+    -o-transition: opacity 0.4s ease-out;
+    transition: opacity 0.4s ease-out;
+}
+
+.banners ul li a:hover img{
+    opacity: 0.7;
+}
+
+
+/* ---------------------------------------------------------------
+    section featured
+--------------------------------------------------------------- */
+.featured{
+    margin-bottom: 30px;
+}
+
+.featured h2{
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.featured p{
+    margin-bottom: 0;
+}
+
+.featured .wrap{
+    padding: 25px 20px;
+    background: #FAFAFA;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+/* ---------------------------------------------------------------
+    footer
+--------------------------------------------------------------- */
+footer .container{
+    position: relative;
+    padding: 20px 0;
+}
+
+footer p,
+footer a{
+    font-size: 12px;
+    line-height: 30px;
+    margin: 0;
+}
+
+footer a:hover{
+    color: #F6002D;
+}
+
+footer .span6:last-child{
+    text-align: right;
+}
+
+footer .span6:last-child a{
+    text-decoration: underline;
+}
+
+footer .scrollTop{
+    position: absolute;
+    top: 10px;
+    left: 49%;
+    display: block;
+    padding: 10px 20px;
+}
+
+
