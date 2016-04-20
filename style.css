@@ -224,11 +224,12 @@ a.btn,
 a.btn:hover,
 input[type="submit"],
 input[type="submit"]:hover{
-    background: #8C000D;/* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#F6002D, #8C000D); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#F6002D, #8C000D); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#F6002D, #8C000D); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#F6002D, #8C000D); /* Standard syntax */
+    background: rgba(140, 0, 13, 1);/* For browsers that do not support gradients */
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(246, 0, 45, 1)), to(rgba(140, 0, 13, 1)));
+    background: -webkit-linear-gradient(rgba(246, 0, 45, 1), rgba(140, 0, 13, 1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(246, 0, 45, 1), rgba(140, 0, 13, 1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(246, 0, 45, 1), rgba(140, 0, 13, 1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(246, 0, 45, 1), rgba(140, 0, 13, 1)); /* Standard syntax */
     position: relative;
     font-size: 16px;
     font-weight: 600;
@@ -241,21 +242,24 @@ input[type="submit"]:hover{
     margin: 0;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 
+
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     -ms-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
+
 }
 
 input.btn:hover,
 a.btn:hover,
 input[type="submit"]:hover{
-    background: #570009;/* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#c20024, #570009); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#c20024, #570009); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#c20024, #570009); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#c20024, #570009); /* Standard syntax */
+    background: rgba(87, 0, 9, 1);/* For browsers that do not support gradients */
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(194, 0, 36, 1)), to(rgba(87, 0, 9, 1)));
+    background: -webkit-linear-gradient(rgba(194, 0, 36, 1), rgba(87, 0, 9, 1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(194, 0, 36, 1), rgba(87, 0, 9, 1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(194, 0, 36, 1), rgba(87, 0, 9, 1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(194, 0, 36, 1), rgba(87, 0, 9, 1)); /* Standard syntax */
 }
 
 .btn.btn-slider,
@@ -447,7 +451,7 @@ main h2{
 
 main ul{
     list-style-type: disc;
-    padding-left: 20px;
+    padding-left: 25px;
     margin-bottom: 20px;
 }
 
@@ -460,7 +464,7 @@ main .wrap{
     display: table;
     width: 100%;
     background: #FFF;
-    padding: 45px 25px;
+    padding: 35px 25px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -493,7 +497,7 @@ main .wrap{
 }
 
 .slider .owl-carousel .slide .wrap{
-    padding: 50px;
+    padding: 50px 75px;
     display: table-cell;
     vertical-align: middle;
     text-align: right;

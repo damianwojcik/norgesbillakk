@@ -12,7 +12,7 @@
 			<div class="span6">
 
 				<p>
-					© 2016 Billakkering og biloppretting – <a href="<?= SITE_URL; ?>">Norgesbillakk.no</a>
+					<?php the_field('footer_left', 'option'); ?>
 				</p>
 
 			</div>
@@ -21,9 +21,9 @@
 
 			<div class="span6">
 
-				<a href="#">
-					Webutvikling og søkemotoroptimalisering - Nettrafikk 
-				</a>
+				<p>
+					<?php the_field('footer_right', 'option'); ?>
+				</p>
 
 			</div>
 			<!-- END span6 -->

@@ -71,7 +71,9 @@
 
 					<div class="wrap">
 
-						<a href="<?= SITE_URL; ?>"><img src="<?= THEME_URL; ?>/assets/img/logo.png" alt="Logo"></a>
+						<?php $logo = get_field('logo', 'option');  ?>
+
+						<a href="<?= SITE_URL; ?>"><img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>"></a>
 
 					</div>
 
@@ -84,10 +86,15 @@
 					<div class="wrap">
 
 						<h2>
-							Kunnskap er vårt verktøy og kvalitet er vårt merke
+
+							<?php the_field('header_title', 'option'); ?>
+							
 							<small>
-								Tlf: 936 02 400, Besøksadresse: Grenseveien 73, 0663 Oslo
+
+								<?php the_field('header_subtitle', 'option'); ?>
+
 							</small>
+
 						</h2>
 
 					</div>
@@ -100,24 +107,61 @@
 
 					<div class="wrap">
 
-						<h3 class="uppercase">åpningstider</h3>
+						<?php
+
+							// check if the repeater field has rows of data
+							if( have_rows('header_right_section', 'option') ):
+
+							 	// loop through the rows of data
+							    while ( have_rows('header_right_section', 'option') ) : the_row(); 
+
+							?>
+						      
+						<h3 class="uppercase"><?php the_sub_field('title', 'option'); ?></h3>	
+
+					<?php
+
+						// check if the repeater field has rows of data
+						if( have_rows('table_row', 'option') ):
+
+						 	// loop through the rows of data
+						    while ( have_rows('table_row', 'option') ) : the_row();
+
+						?>
 
 						<table>
 							<tr>
-								<td>Man-Fre</td>
-								<td>08-16</td>
-							</tr>
-							<tr>
-								<td>Lørdag</td>
-								<td>09-14</td>
-							</tr>
-							<tr>
-								<td>Søndag</td>
-								<td>Stengt</td>
+								<td><?php the_sub_field('table_row_title', 'option'); ?></td>
+								<td><?php the_sub_field('table_row_content', 'option'); ?></td>
 							</tr>
 						</table>
 
+						<?php
+
+							endwhile;
+
+								else :
+
+							    // no rows found
+
+							endif;
+
+							?>
+
 					</div>
+
+
+					<?php
+
+						endwhile;
+
+							else :
+
+						    // no rows found
+
+						endif;
+
+						?>
 
 				</div>
 				<!-- END span2 -->
