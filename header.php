@@ -7,6 +7,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<title><?php wp_title(); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" href="<?= THEME_URL; ?>/favicon.ico" type="image/png">
 
 
 	<!-- CSS
@@ -88,7 +89,7 @@
 						<h2>
 
 							<?php the_field('header_title', 'option'); ?>
-							
+
 							<small>
 
 								<?php the_field('header_subtitle', 'option'); ?>
