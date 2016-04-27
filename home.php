@@ -29,7 +29,7 @@
 
 						<div class="wrap">
 
-							<a href="http://localhost/norgesbillakk/kontakt-oss/" class="btn btn-slider">Kontakt oss! &raquo;</a>
+							<a href="<?= SITE_URL; ?>/kontakt-oss" class="btn btn-slider">Kontakt oss! &raquo;</a>
 
 						</div>
 
